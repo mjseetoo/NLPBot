@@ -1,0 +1,3 @@
+pip install os
+pip install streamlit
+pip install ibm_watson_machine_learning
