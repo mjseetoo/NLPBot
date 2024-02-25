@@ -29,7 +29,9 @@ model = Model(
     space_id = space_id
     )
 
-prompt_input = """You are an NLP Chat bot Answer the following questions about an NLP course given the syllabus below. If the syllabus does not explicitly have an answer, use your knowledge to answer it.
+prompt_input = """You are an NLP Chat bot questions about an NLP course given the syllabus below. If the syllabus does
+ not explicitly have an answer, if you don't have the answer, say 'I don't know, you might want to ask 
+ the instructor'.
 
 Syllabus: 
 ###
