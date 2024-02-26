@@ -1,4 +1,3 @@
-
 import os
 import streamlit as st
 
@@ -148,18 +147,18 @@ try:
 except Exception as e:
     st.text("Waiting for keys")
 
+try:
+    st.title('Ask the NLP Bot')
 
-st.title('Ask the NLP Bot')
-
-if 'messages' not in st.session_state:
+    if 'messages' not in st.session_state:
         st.session_state.messages = []
 
-for message in st.session_state.messages:
+    for message in st.session_state.messages:
         st.chat_message(message['role']).markdown(message['content'])
 
-prompt = st.text_input('Ask your question here')
+    prompt = st.text_input('Ask your question here')
 
-if prompt:
+    if prompt:
         st.chat_message('user').markdown(prompt)
 
         st.session_state.messages.append({'role': 'user', 'content': prompt})
@@ -171,9 +170,5 @@ if prompt:
         st.session_state.messages.append({
             'role': 'assistant', 'content': LLM_Response
         })
-
-
-
-
-
-
+except Exception as e:
+    st.text("Correct keys have not been entered yet")
