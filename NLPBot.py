@@ -58,8 +58,6 @@ data.
 • Implement state-of-the-art algorithms and statistical techniques for reasoning about linguistic data.
 • Adapt and apply state-of-the-art language technology to new problems and settings.
 • Read and understand current research on natural language processing.
-• Exercise public speaking skills by discussing various course topics with classmates, asking and answering
-questions, and doing group presentations.
 By the end of this course students should be able to transfer the knowledge gained, and apply it outside of the
 context of the course to:
 • Identify, formulate, analyze, and solve complex computing or engineering problems by applying principles of
