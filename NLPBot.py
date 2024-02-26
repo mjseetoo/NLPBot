@@ -2,10 +2,14 @@
 import os
 import streamlit as st
 
+st.subheader("Enter Your Credentials")
+api_key = st.text_input("Enter API Key:")
+project_id = st.text_input("Enter Project ID:")
+
 def get_credentials():
     return {
         "url" : "https://us-south.ml.cloud.ibm.com",
-        "apikey" : "EEF0ifYp7m9wo25EhBnUlAETdgWEZFNV62UdLmjXlLNi"
+        "apikey" : api_key
     }
 
 model_id = "meta-llama/llama-2-70b-chat"
@@ -17,7 +21,6 @@ parameters = {
     "repetition_penalty": 1
 }
 
-project_id = os.getenv("PROJECT_ID")
 space_id = os.getenv("SPACE_ID")
 
 from ibm_watson_machine_learning.foundation_models import Model
@@ -26,12 +29,12 @@ model = Model(
     model_id = model_id,
     params = parameters,
     credentials = get_credentials(),
-    project_id = 'eb07e83f-a6dd-4b53-92d1-2b7d6d68e2d5',
+    project_id = project_id,
     space_id = space_id
     )
 
 prompt_input = """You are an NLP Chat bot questions about an NLP course given the syllabus below. If the syllabus does
- not explicitly have an answer, and you do not have an answer, say 'I don't know, you might want to ask 
+ not explicitly have an answer, if you don't have the answer, say 'I don't know, you might want to ask 
  the instructor'.
 
 Syllabus: 
@@ -58,6 +61,8 @@ data.
 • Implement state-of-the-art algorithms and statistical techniques for reasoning about linguistic data.
 • Adapt and apply state-of-the-art language technology to new problems and settings.
 • Read and understand current research on natural language processing.
+• Exercise public speaking skills by discussing various course topics with classmates, asking and answering
+questions, and doing group presentations.
 By the end of this course students should be able to transfer the knowledge gained, and apply it outside of the
 context of the course to:
 • Identify, formulate, analyze, and solve complex computing or engineering problems by applying principles of
@@ -66,6 +71,9 @@ computing, engineering, science, and mathematics.
 with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and
 economic factors.
 • Communicate effectively in a variety of professional contexts, with a range of audiences.
+• Function effectively as a member or leader of a team engaged in activities appropriate to the program’s
+discipline, creating a collaborative and inclusive environment, establishing goals, planning tasks, and meeting
+objectives.
 1.2 Prerequisites
 • For CSCI 4140: CSCI 2540 Data Abstraction and Object-Oriented Data Structures, MATH 2228 Elementary
 Statistical Methods I, or MATH 2283 Statistics for Business.
