@@ -66,9 +66,6 @@ computing, engineering, science, and mathematics.
 with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and
 economic factors.
 • Communicate effectively in a variety of professional contexts, with a range of audiences.
-• Function effectively as a member or leader of a team engaged in activities appropriate to the program’s
-discipline, creating a collaborative and inclusive environment, establishing goals, planning tasks, and meeting
-objectives.
 1.2 Prerequisites
 • For CSCI 4140: CSCI 2540 Data Abstraction and Object-Oriented Data Structures, MATH 2228 Elementary
 Statistical Methods I, or MATH 2283 Statistics for Business.
