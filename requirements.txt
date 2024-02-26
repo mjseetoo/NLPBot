@@ -1,1 +1,1 @@
-ibm_watson_machine_learning
+pip install ibm_watson_machine_learning
