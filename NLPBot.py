@@ -1,3 +1,4 @@
+
 import os
 import streamlit as st
 
@@ -126,8 +127,9 @@ Answer: The course ends on 3:30 on Tuesdays and Thursdays, however it will fully
 Question: What is NLP
 Answer: The syllabus gives the description for NLP: Natural Language Processing (NLP) is the engineering art and science of how to teach computers to understand human language.
 
-Question: Why is NLP important
-Answer:"""
+Question: """
+
+
 
 st.title('Ask the NLP Bot')
 
@@ -144,7 +146,7 @@ if prompt:
 
     st.session_state.messages.append({'role' : 'user', 'content':prompt})
 
-    LLM_Response = model.generate_text(prompt=prompt)
+    LLM_Response = model.generate_text(prompt=prompt_input + prompt + "Answer: ")
 
     st.chat_message('assistant').markdown(LLM_Response)
 
