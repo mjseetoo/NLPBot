@@ -164,7 +164,7 @@ if prompt:
 
         st.session_state.messages.append({'role': 'user', 'content': prompt})
 
-        LLM_Response = model.generate_text(prompt=model.prompt_input + prompt + "Answer: ")
+        LLM_Response = model.generate_text(prompt=prompt_input + prompt + "Answer: ")
 
         st.chat_message('assistant').markdown(LLM_Response)
 
